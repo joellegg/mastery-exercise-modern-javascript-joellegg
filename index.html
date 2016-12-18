@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Battle Bots</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="quiz.css">
+    <link rel="stylesheet" type="text/css" href="styles/quiz.css">
 </head>
 
 <body>
@@ -17,13 +17,19 @@
             <div class="card__prompt">
                 <div class = "headline">RECORD YOUR BOTS NAME</div>
                 <div class="field">
-                    <input type="text" autofocus="true" id="player-name" class="field__textinput">
+                    <input type="text" autofocus="true" id="player-name" class="field__textinput" placeholder="AwesomeBot">
+                </div>
+            </div>
+            <div class="card__prompt">
+                <div class = "headline">RECORD YOUR ENEMIES NAME</div>
+                <div class="field">
+                    <input type="text" autofocus="false" id="player-name" class="field__textinput" placeholder="Sir PoopFace">
                 </div>
             </div>
             <!-- Button to move along to bot class Section -->
             <div class="card__button">
                 <a class="selectClass card__link btn btn--big btn--orange" href="#" next="card--class">
-                    <span class="btn__prompt">></span>
+                    <span class="btn__prompt"></span>
                     <span class="btn__text">Select Your Bot</span>
                 </a>
             </div>
@@ -53,7 +59,7 @@
                     <div class="col-sm-4">
                         <div class="card__button">
                             <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
+                                <span class="btn__prompt"></span>
                                 <span class="btn__text">Warrior</span>
                             </a>
                         </div>
@@ -92,7 +98,7 @@
                         </div>
                         <div class="card__button">
                             <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
+                                <span class="btn__prompt"></span>
                                 <span class="btn__text">Conjurer</span>
                             </a>
                         </div>
@@ -101,25 +107,25 @@
                     <div class="col-sm-4">
                         <div class="card__button">
                             <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
+                                <span class="btn__prompt"></span>
                                 <span class="btn__text">Thief</span>
                             </a>
                         </div>
                         <div class="card__button">
                             <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
+                                <span class="btn__prompt"></span>
                                 <span class="btn__text">Ninja</span>
                             </a>
                         </div>
                         <div class="card__button">
                             <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
+                                <span class="btn__prompt"></span>
                                 <span class="btn__text">Assassin</span>
                             </a>
                         </div>
                         <div class="card__button">
                             <a class="classButton buttonSurprise class__link btn btn--big btn--yellow" href="#">
-                                <span class="btn__prompt">></span>
+                                <span class="btn__prompt"></span>
                                 <span class="btn__text">surprise me</span>
                             </a>
                         </div>
@@ -163,7 +169,7 @@
             <!-- Move to defeat your battle section button -->
             <div class="card__button">
                 <a class="card__link btn btn--big btn--orange" href="#" next="card--battleground">
-                    <span class="btn__prompt">></span>
+                    <span class="btn__prompt"></span>
                     <span class="btn__text">defeat your enemies</span>
                 </a>
             </div>
@@ -252,6 +258,10 @@
     </article>
 
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="quiz.js"></script>
+    <script src="scripts/robots.js"></script>
+    <script src="scripts/enemies.js"></script>
+    <script src="scripts/weapons.js"></script>
+    <script src="scripts/player.js"></script>
+    <script src="scripts/battledome.js"></script>
 </body>
 </html>
