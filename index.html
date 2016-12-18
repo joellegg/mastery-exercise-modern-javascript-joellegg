@@ -1,0 +1,257 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Battle Bots</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+</head>
+
+<body>
+
+    <article id="game-container">
+
+        <!-- Bot Name Selection Section -->
+        <section id="player-setup" class="card card--name">
+            <div class="card__prompt">
+                <div class = "headline">RECORD YOUR BOTS NAME</div>
+                <div class="field">
+                    <input type="text" autofocus="true" id="player-name" class="field__textinput">
+                </div>
+            </div>
+            <!-- Button to move along to bot class Section -->
+            <div class="card__button">
+                <a class="selectClass card__link btn btn--big btn--orange" href="#" next="card--class">
+                    <span class="btn__prompt">></span>
+                    <span class="btn__text">Select Your Bot</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Bot Class Selection Section -->
+        <section>
+                <!-- 3 classes, Star Wars, Transformers, Misc -->
+        </section>
+
+        <!-- Robot Selection Section -->
+        <section id="class-select" class="card card--class">
+            <!-- Button to go back to class selection -->
+            <div class="card__prompt">
+                <div class="headline">CHOOSE YOUR BOT</div>
+                <div>
+                    <a class="card__back btn btn--small" href="#" previous="card--name">
+                        <span class="btn__prompt">&lt;</span>
+                        <span class="btn__text">Back</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Div to choose your robot -->
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Warrior</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Valkyrie</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Berserker</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Monk</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Wizard</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Sorcerer</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Conjurer</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Thief</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Ninja</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton class__link btn btn--big btn--blue" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">Assassin</span>
+                            </a>
+                        </div>
+                        <div class="card__button">
+                            <a class="classButton buttonSurprise class__link btn btn--big btn--yellow" href="#">
+                                <span class="btn__prompt">></span>
+                                <span class="btn__text">surprise me</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Button to move along and select weapon -->
+            <div class="card__button">
+                <a class="card__link btn btn--big btn--orange" href="#" next="card--weapon">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Select weapon</span>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Weapon Selection Section -->
+        <section id="weapon-select" class="card card--weapon">
+            <div class="card__prompt">
+
+                <div class = "headline">choose your weapon</div>
+                 <!-- Back to robot selection -->
+                 <div>
+                    <a class="card__back btn btn--small" href="#" previous="card--class">
+                        <span class="btn__prompt">&lt;</span>
+                        <span class="btn__text">Back</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Weapons list goes here -->
+            <div class="container-fluid">
+                <div class="row addWeaponsHere">
+                    <!-- Weapons!!! -->
+                </div>
+            </div>
+            <!-- Weapons list ENDS here -->
+
+            <!-- Move to defeat your battle section button -->
+            <div class="card__button">
+                <a class="card__link btn btn--big btn--orange" href="#" next="card--battleground">
+                    <span class="btn__prompt">></span>
+                    <span class="btn__text">defeat your enemies</span>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Battle ground section -->
+        <section id="battleground" class="card card--battleground">
+            <h1 class="centeredTitle">Battle Bots</h1>
+            <div class="container">
+                <div class="row">
+
+                    <!-- left div -->
+                    <div class="battlefieldDivs col-sm-4">
+                        <div class="grayBack">
+                            <h2>Player Stats</h2>
+                            <p>Health</p>
+                            <div class="progress">
+                        <div id="heroHealth" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        </div>
+                            </div>
+                            <p>Strength</p>
+                            <div class="progress">
+                        <div id="heroStrength" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        </div>
+                            </div>
+                            <p>Intelligence</p>
+                            <div class="progress">
+                        <div id="heroIntelligence" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        </div>
+                            </div>
+                        </div>
+
+                        <h3 class="boxed" id="weaponSelection">Weapon</h3>
+                        <h3 class="boxed" id="heroSelection">Hero</h3>
+                        <div class="takeFullSize">
+                            <img  id='playerImage' src="">
+                        </div>
+                    </div>
+
+                    <!-- middle div -->
+                    <div class="battlefieldDivs centerDiv col-sm-4">
+                        <div id="battleBackButtonDiv">
+                            <a class="card__back back--battlefield btn btn--small"
+                         href="#"
+                         previous="card--weapon">
+                        <span class="btn__prompt">&lt;</span>
+                        <span class="btn__text">Back</span>
+                            </a>
+                        </div>
+                        <button id="attackBttn">Attack!</button>
+                        <div id="battleResults">
+                        </div>
+                    </div>
+
+                    <!-- right div -->
+                    <div class="battlefieldDivs col-sm-4">
+                        <div class="grayBack">
+                            <h2>Enemy Stats</h2>
+                            <p>Health</p>
+                            <div class="progress">
+                        <div id="enemyHealth" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        </div>
+                            </div>
+                            <p>Strength</p>
+                            <div class="progress">
+                        <div id="enemyStrength" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        </div>
+                            </div>
+                            <p>Intelligence</p>
+                            <div class="progress">
+                        <div id="enemyIntelligence" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        </div>
+                            </div>
+                        </div>
+                        <h3 class="boxed" id="enemyWeaponSelection">Weapon</h3>
+                        <h3 class="boxed" id="enemySelection">Villain</h3>
+                        <div class="takeFullSize">
+                            <img  id='enemyImage' src="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
