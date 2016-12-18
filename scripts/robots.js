@@ -13,11 +13,11 @@ BattleDome.BotHall.RobotClass = function() {
     }
 }
 
-// 3 classes: STAR WARS,     TRANSFORMERS,     MISC
-//              - C-3PO         - Optimus       - WALL-E
-//              - R2-D2         - Sentinel      - Terminator
-//              - BB-8          - Bumblebee     - Dot (Spaceballs)
-//                              - Ironhide      - Bicentennial Man
+// 3 classes:   STAR WARS,     TRANSFORMERS,     MISC
+//                - C-3PO         - Optimus       - WALL-E
+//                - R2-D2         - Sentinel      - Terminator
+//                - BB-8          - Bumblebee     - Dot (Spaceballs)
+//                                - Ironhide      - Bicentennial Man
 
 //////////////////
 /// STAR WARS  ///
