@@ -1,6 +1,6 @@
 // 3 classes:   STAR WARS,               TRANSFORMERS,           MISC
 //              - B1 Battle Droids          - Megatron            - Auto (WALL-E)
-//              - Imperial Probe Droids     - Starscream          - Vanessa Kensington (Austin Powers)
+//              - Imperial Probe Droids     - Starscream          - Sentinel (The Matrix)
 //              - AT-AT                     - Shockwave           - Gort (Day the Earth Stood Still)
 //                                          - galvatron           - Robo Cop
 

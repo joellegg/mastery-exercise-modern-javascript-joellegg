@@ -3,9 +3,9 @@ body {
   margin: 0;
   padding: 10px;
   font-size: 3em;
-  background-image: url("http://svn.gna.org/svn/wesnoth/branches/water_animation/data/core/images/story/landscape-battlefield_nohumans.jpg");
+/*  background-image: url();
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
 }
 
 .field {

@@ -30,14 +30,46 @@
             <div class="card__button">
                 <a class="selectClass card__link btn btn--big btn--orange" href="#" next="card--class">
                     <span class="btn__prompt"></span>
-                    <span class="btn__text">Select Your Bot</span>
+                    <span class="btn__text">Select Your Bot Class</span>
                 </a>
             </div>
         </section>
 
         <!-- Bot Class Selection Section -->
         <section id="class-select" class="card card--class">
-                <!-- 3 classes, Star Wars, Transformers, Misc -->
+            <!-- back button -->
+            <div>
+                <a class="card__back btn btn--small" href="#" previous="card--name">
+                    <span class="btn__prompt">&lt;</span>
+                    <span class="btn__text">Back</span>
+                </a>
+            </div>
+            <!-- 3 classes, Star Wars, Transformers, Misc -->
+            <div class="card__button">
+                <a class="classButton class__link btn btn--big btn--blue" href="#">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Star Wars</span>
+                </a>
+            </div>
+            <div class="card__button">
+                <a class="classButton class__link btn btn--big btn--blue" href="#">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Transformers</span>
+                </a>
+            </div>
+            <div class="card__button">
+                <a class="classButton class__link btn btn--big btn--blue" href="#">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Misc</span>
+                </a>
+            </div>
+            <!-- Button to move along to robot Section -->
+            <div class="card__button">
+                <a class="card__link btn btn--big btn--orange" href="#" next="card--robot">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Select Your Bot</span>
+                </a>
+            </div>
         </section>
 
         <!-- Robot Selection Section -->
@@ -46,7 +78,7 @@
             <div class="card__prompt">
                 <div class="headline">CHOOSE YOUR BOT</div>
                 <div>
-                    <a class="card__back btn btn--small" href="#" previous="card--name">
+                    <a class="card__back btn btn--small" href="#" previous="card--class">
                         <span class="btn__prompt">&lt;</span>
                         <span class="btn__text">Back</span>
                     </a>
@@ -141,39 +173,6 @@
                     <span class="btn__text">Select weapon</span>
                 </a>
             </div>
-
-        </section>
-
-        <!-- Weapon Selection Section -->
-        <section id="weapon-select" class="card card--weapon">
-            <div class="card__prompt">
-
-                <div class = "headline">choose your weapon</div>
-                 <!-- Back to robot selection -->
-                 <div>
-                    <a class="card__back btn btn--small" href="#" previous="card--class">
-                        <span class="btn__prompt">&lt;</span>
-                        <span class="btn__text">Back</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Weapons list goes here -->
-            <div class="container-fluid">
-                <div class="row addWeaponsHere">
-                    <!-- Weapons!!! -->
-                </div>
-            </div>
-            <!-- Weapons list ENDS here -->
-
-            <!-- Move to defeat your battle section button -->
-            <div class="card__button">
-                <a class="card__link btn btn--big btn--orange" href="#" next="card--battleground">
-                    <span class="btn__prompt"></span>
-                    <span class="btn__text">defeat your enemies</span>
-                </a>
-            </div>
-
         </section>
 
         <!-- Battle ground section -->
