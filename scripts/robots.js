@@ -122,7 +122,7 @@ BattleDome.BotHall.Dot = function() {
     this.name = 'Dot';
     this.healthBonus = this.healthBonus + 20;
     this.damageBonus = this.damageBonus + 30;
-    this.image = 'https://s-media-cache-ak0.pinimg.com/originals/bf/7a/bf/bf7abf23d76c269220ca9994c69f594f.png';
+    this.image = 'http://content.randomenthusiasm.com/bAEoDOS9q.gif';
 };
 BattleDome.BotHall.Dot.prototype = new BattleDome.BotHall.MiscBots();
 
