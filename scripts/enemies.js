@@ -4,6 +4,20 @@
 //              - AT-AT                     - Shockwave           - Gort (Day the Earth Stood Still)
 //                                          - galvatron           - Robo Cop
 
+var BattleDome = BattleDome || {};
+BattleDome.Combatants = {};
+
+//  Constructor function for basic player or enemy bot
+BattleDome.Combatants.RobotClass = function() {
+    this.name = 'Vacuum';
+    this.healthBonus = 0;
+    this.damageBonus = 0;
+    this.image = 'http://img02.deviantart.net/4ba0/i/2016/001/b/9/the_brave_little_toaster__kirby_by_fawfulthegreat64-d9mdwf9.png';
+
+    this.toString = function() {
+        return this.name;
+    }
+}
 /////////////////////////
 /// STAR WARS ENEMIES ///
 /////////////////////////

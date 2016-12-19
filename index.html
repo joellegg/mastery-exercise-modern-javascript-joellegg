@@ -23,7 +23,7 @@
             <div class="card__prompt">
                 <div class = "headline">RECORD YOUR ENEMIES NAME</div>
                 <div class="field">
-                    <input type="text" autofocus="false" id="player-name" class="field__textinput" placeholder="Sir PoopFace">
+                    <input type="text" autofocus="false" id="enemy-name" class="field__textinput" placeholder="Sir PoopFace">
                 </div>
             </div>
             <!-- Button to move along to bot class Section -->
@@ -36,12 +36,12 @@
         </section>
 
         <!-- Bot Class Selection Section -->
-        <section>
+        <section id="class-select" class="card card--class">
                 <!-- 3 classes, Star Wars, Transformers, Misc -->
         </section>
 
         <!-- Robot Selection Section -->
-        <section id="class-select" class="card card--class">
+        <section id="robot-select" class="card card--robot">
             <!-- Button to go back to class selection -->
             <div class="card__prompt">
                 <div class="headline">CHOOSE YOUR BOT</div>
@@ -258,6 +258,7 @@
     </article>
 
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="scripts/app.js"></script>
     <script src="scripts/robots.js"></script>
     <script src="scripts/enemies.js"></script>
     <script src="scripts/weapons.js"></script>

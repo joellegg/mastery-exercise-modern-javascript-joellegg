@@ -1,0 +1,243 @@
+body {
+  font-family: "Lato", "Helvetica", "sans-serif";
+  margin: 0;
+  padding: 10px;
+  font-size: 3em;
+  background-image: url("http://svn.gna.org/svn/wesnoth/branches/water_animation/data/core/images/story/landscape-battlefield_nohumans.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.field {
+  margin: 20px 0 0 0;
+}
+
+.field__textinput {
+  font-size: 1em;
+  padding: 15px 0;
+  text-align: center;
+  min-width: 500px;
+}
+
+/*
+  Section styles
+ */
+.card {
+  display: none;
+}
+
+.card__prompt {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card__button {
+  font-size: 1.1em;
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+
+
+/*
+  Button styles
+ */
+
+.btn {
+  text-decoration: none;
+  background-color: white;
+  color: #888;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 10px 5px;
+  min-width: 260px;
+  border: .1em solid black;
+}
+
+.btn--orange {
+  border-color: #FF4136;
+  color: white;
+  background-color: #FF4136;
+}
+
+.btn--blue {
+  border-color: #0074D9;
+  color: white;
+  background-color: #0074D9;
+}
+
+.btn--yellow {
+  border-color: #E4BD00;
+  color: white;
+  background-color: #F3C500;
+}
+
+.btn--big {
+  font-size: 28px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.btn--small {
+  min-width: 50px;
+}
+
+.btn__prompt {
+  background-color: white;
+  color: #fff;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: -10px;
+  font-weight: 600;
+  background-color: #333;
+  opacity: .4;
+  border-radius: 5px 0 0 5px;
+  left: 37px;
+  float: left;
+}
+
+.btn__text {
+  padding: 0 50px 0 20px;
+  border-radius: 0 5px 5px 0;
+}
+
+
+/* Joel's CSS styling needs to be reorganized. */
+.centeredTitle {
+  text-align: center;
+  font-size: 2em;
+  margin: 0 1em 0.5em 1em;
+  text-shadow: 2px 2px 2px white;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+.battlefieldDivs {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  max-width: 300px;
+}
+.battlefieldDivs h3 {
+  margin: 0.3em 0 0 0;
+}
+#attackBttn {
+  border-radius: 0.2em;
+  padding: 0 0.3em;
+  background-color: red;
+  max-width: 4em;
+  margin: 0 auto;
+}
+.smallerTopMargin {
+  margin: 0.3em auto;
+}
+.meter {
+  height: 10px;  /* Can be anything */
+  position: relative;
+  background: #555;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 5px;
+  box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+.green {
+  background-color: green;
+  background-image: linear-gradient(to bottom, green, darkgreen);
+}
+.yellow {
+  background-color: #FCFA9D;
+  background-image: linear-gradient(to bottom, #FCFA9D, #FAF502);
+}
+.red {
+  background-color: #FCFA9D;
+  background-image: linear-gradient(to bottom, #f0a3a3, #f42323);
+}
+.grayBack {
+  background-color: rgba(180,180,180,0.8);
+  padding: 0.5em;
+  border-radius: 1em;
+  border: 1px solid black;
+}
+.grayBack h2 {
+  margin: .1em auto .4em auto;
+}
+.grayBack p {
+  font-size: 0.5em;
+  margin: 0.2em auto;
+}
+.boxed {
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: 0.2em;
+  background-color: rgba(180,180,180,0.8);
+}
+.centerDiv {
+  justify-content: center;
+}
+#battleResults {
+  border: 2px solid green;
+  margin: 1em;
+  border-radius: 0.3em;
+  background-color: rgba(180,180,180,0.8);
+}
+#battleResults h1 {
+  margin-top: 0.2em;
+}
+#battleResults h3 {
+  margin-bottom: 0.2em;
+}
+div .progress {
+  margin: 0;
+  height: 0.4em;
+}
+/* Jared's CSS that is probably going to break Joel's */
+
+.back--battlefield {
+ margin-bottom: 1.5em;
+}
+
+.card__back {
+  max-width: 6em;
+}
+
+.headline {
+  color: black;
+  text-shadow: 2px 2px 1px white;
+}
+
+.card__link {
+  background-color: #b2b2ac;
+  border: 2px solid black;
+}
+
+.classButton {
+  background-color: #73593b;
+  border: 2px solid #73593b;
+}
+
+.weaponButton {
+  background-color: #c93200;
+  border: 2px solid #c93200;
+  max-width: 8em;
+}
+
+.buttonSurprise {
+  background-color: #816426;
+}
+
+.borderClick {
+  border: 4px solid black;
+}
+
+.takeFullSize {
+  width: 250px;
+  height: 500px;
+}
