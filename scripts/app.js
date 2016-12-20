@@ -9,14 +9,8 @@ $(document).ready(function() {
         var moveAlong = false;
 
         switch (nextCard) {
-            case "card--class":
-                moveAlong = ($("#player-name").val() !== "") && ($("#enemy-name").val() !== "");
-                break;
-            case "card--robot":
-                moveAlong = ($(".classButton").hasClass("borderClick"));
-                break;
             case "card--battleground":
-                moveAlong = ($(".classButton").hasClass("borderClick") === true);
+                moveAlong = ($("#player-name").val() !== "") && ($("#enemy-name").val() !== "");
                 break;
         }
 
@@ -29,9 +23,6 @@ $(document).ready(function() {
 
         if (moveAlong === false && ($("#player-name").val() == "")) {
             alert('Hey listen! I\'d call you by your name, but I don\'t know it!');
-        } else if
-            (moveAlong === false && ($(".classButton").hasClass("borderClick") === false)) {
-            alert('I personally recommend you choose to be surprised.')
         }
 
     });

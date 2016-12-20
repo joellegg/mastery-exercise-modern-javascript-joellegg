@@ -15,136 +15,41 @@
         <!-- Bot Name Selection Section -->
         <section id="player-setup" class="card card--name">
             <div class="card__prompt">
-                <div class = "headline">RECORD YOUR BOTS NAME</div>
+                <div class = "headline">RECORD YOUR BOTS NAME:</div>
                 <div class="field">
                     <input type="text" autofocus="true" id="player-name" class="field__textinput" placeholder="AwesomeBot">
                 </div>
 
                 <!-- Select Robot -->
-                <div class="btn-group">
-                  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select your robot <span class="caret"></span>
-                  </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">C-3PO</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                    </ul>
-                </div>
+                <select name="select">
+                  <option value="value1" selected>SELECT YOUR ROBOT:</option>
+                  <option value="value2">C-3PO</option>
+                  <option value="value3">R2-D2</option>
+                  <option value="value4">Optimus Prime</option>
+                  <option value="value5">Bumblebee</option>
+                  <option value="value6">Dot</option>
+                  <option value="value7">Terminator </option>
+                </select>
             </div>
             <div class="card__prompt">
-                <div class = "headline">RECORD YOUR ENEMIES NAME</div>
+                <div class="headline topMargin">RECORD YOUR ENEMIES NAME</div>
                 <div class="field">
                     <input type="text" autofocus="false" id="enemy-name" class="field__textinput" placeholder="Sir PoopFace">
                 </div>
+                <!-- Select Robot -->
+                <select name="select">
+                  <option value="value1" selected>CHOOSE YOUR ENEMY</option>
+                  <option value="value2">C-3PO</option>
+                  <option value="value3">R2-D2</option>
+                  <option value="value4">Optimus Prime</option>
+                  <option value="value5">Bumblebee</option>
+                  <option value="value6">Dot</option>
+                  <option value="value7">Terminator </option>
+                </select>
             </div>
             <!-- Button to move along to bot class Section -->
             <div class="card__button">
-                <a class="selectClass card__link btn btn--big btn--orange" href="#" next="card--class">
-                    <span class="btn__prompt"></span>
-                    <span class="btn__text">Select Your Bot Class</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Bot Class Selection Section -->
-        <section id="class-select" class="card card--class">
-            <!-- back button -->
-            <div>
-                <a class="card__back btn btn--small" href="#" previous="card--name">
-                    <span class="btn__prompt">&lt;</span>
-                    <span class="btn__text">Back</span>
-                </a>
-            </div>
-
-            <!-- 3 classes, Star Wars, Transformers, Misc -->
-            <div class="card__button">
-                <button class='classButton class__link btn btn--big btn--blue'>Star Wars</button>
-            </div>
-            <div class="card__button">
-                <button class="classButton class__link btn btn--big btn--blue">Transformers</button>
-            </div>
-            <div class="card__button">
-                <button class="classButton class__link btn btn--big btn--blue">Misc</button>
-            </div>
-            <!-- Button to move along to robot Section -->
-            <div class="card__button">
-                <button class="card__link btn btn--big btn--orange" next="card--robot">Select Your Bot</button>
-            </div>
-        </section>
-
-        <!-- Robot Selection Section -->
-        <section id="robot-select" class="card card--robot">
-            <!-- Button to go back to class selection -->
-            <div class="card__prompt">
-                <div class="headline">CHOOSE YOUR BOT</div>
-                <div>
-                    <button class="card__back btn btn--small" href="#" previous="card--class">Back</button>
-                </div>
-            </div>
-            <!-- Div to choose your robot -->
-            <div class="container-fluid">
-                <div class="row">
-
-                    <div class="col-sm-4">
-                        <div class="card__button">
-                            <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
-                                <span class="btn__text">Valkyrie</span>
-                            </a>
-                        </div>
-                        <div class="card__button">
-                            <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
-                                <span class="btn__text">Berserker</span>
-                            </a>
-                        </div>
-                        <div class="card__button">
-                            <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
-                                <span class="btn__text">Monk</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card__button">
-                            <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
-                                <span class="btn__text">Wizard</span>
-                            </a>
-                        </div>
-                        <div class="card__button">
-                            <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt">></span>
-                                <span class="btn__text">Sorcerer</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="card__button">
-                            <a class="classButton class__link btn btn--big btn--blue" href="#">
-                                <span class="btn__prompt"></span>
-                                <span class="btn__text">Thief</span>
-                            </a>
-                        </div>
-                        <div class="card__button">
-                            <a class="classButton buttonSurprise class__link btn btn--big btn--yellow" href="#">
-                                <span class="btn__prompt"></span>
-                                <span class="btn__text">surprise me</span>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Button to move along and select weapon -->
-            <div class="card__button">
-                <a class="card__link btn btn--big btn--orange" href="#" next="card--battleground">
+                <a class="selectClass card__link btn btn--big btn--orange" href="#" next="card--battleground">
                     <span class="btn__prompt"></span>
                     <span class="btn__text">Do Battle</span>
                 </a>
@@ -190,7 +95,7 @@
                         <div id="battleBackButtonDiv">
                             <a class="card__back back--battlefield btn btn--small"
                          href="#"
-                         previous="card--robot">
+                         previous="card--name">
                         <span class="btn__prompt">&lt;</span>
                         <span class="btn__text">Back</span>
                             </a>

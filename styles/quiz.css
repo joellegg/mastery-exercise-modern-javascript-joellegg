@@ -241,3 +241,6 @@ div .progress {
   width: 250px;
   height: 500px;
 }
+.topMargin {
+  margin-top: 1em;
+}
