@@ -1,5 +1,5 @@
 let player = {};
-let playerRobot;
+let enemy = {};
 let moveAlong;
 
 /* Show the initial view that accepts player name */
@@ -33,12 +33,10 @@ $(".card__link").click(function(e) {
     } if (moveAlong === false && $('.enemySelection').find(':selected').text() == 'CHOOSE YOUR ENEMY') {
         alert("Please select your enemy")
     }
-    console.log(moveAlong)
 
 });
 
 // When the back button clicked, move back a view
-
 $(".card__back").click(function(e) {
     var previousCard = $(this).attr("previous");
     $(".card").hide();
@@ -46,8 +44,12 @@ $(".card__back").click(function(e) {
 });
 
 
+////////////////////////////
+///    Event Listeners   ///
+////////////////////////////
+
 $("#doBattle").click(function() {
-    console.log(moveAlong)
+    // will load player and enemy if moveAlong is true; moveAlong true means all fields are selected;
     if (moveAlong) {
         // get player name
         playerName = $('#player-name')[0].value;
@@ -63,11 +65,6 @@ $("#doBattle").click(function() {
 
     }
 })
-
-////////////////////////////
-///    Event Listeners   ///
-////////////////////////////
-
 
  // Add event listener to all select buttons
   $('.classButton').click(function(){
