@@ -75,8 +75,8 @@ function attackEachOther() {
     console.log("attackEachOther function called")
     // Hero attacks first
         // Remove attack damage from enemy health
-        enemy.healthBonus -= hero.damageBonus;
-        console.log("enemy health", orc.health);
+        enemy.healthBonus -= player.damageBonus;
+        console.log("enemy health after hit", enemy.healthBonus);
 
         // Display enemy's health on DOM
         loadEnemyStats('enemy health after attack', enemy.healthBonus);
@@ -98,7 +98,7 @@ function attackEachOther() {
     // Enemy attacks
         // Remove attack damage from hero health
         player.healthBonus -= enemy.damageBonus;
-        console.log('player health after attack', hero.healthBonus);
+        console.log('player health after attack', player.healthBonus);
 
         // display heroes health on DOM
         loadPlayerStats(player.healthBonus);

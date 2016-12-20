@@ -68,3 +68,6 @@ $("#doBattle").click(function() {
 })
 
 // event listener on attack button
+$('#attackBttn').click(function() {
+    attackEachOther()
+});
