@@ -1,5 +1,6 @@
 let player = {};
 let playerRobot;
+let moveAlong = false;
 
 // Show the correct html sections
 $(document).ready(function() {
@@ -8,8 +9,7 @@ $(document).ready(function() {
 
     // When any button with card__link class is clicked, move on to the next view.
     $(".card__link").click(function(e) {
-        var nextCard = $(this).attr("next");
-        var moveAlong = false;
+        let nextCard = $(this).attr("next");
 
         switch (nextCard) {
             case "card--battleground":
@@ -44,28 +44,31 @@ $(document).ready(function() {
         $(".card").hide();
         $("." + previousCard).show();
     });
+
+    $("#doBattle").click(function() {
+        if (moveAlong) {
+            // get player name
+            playerName = $('#player-name')[0].value;
+            enemyName = $('#enemy-name')[0].value;
+
+            // get players robot selection
+            playerSelection = $('.robotSelection').find(':selected').val();
+            player = new BattleDome.BotHall[playerSelection](playerName);
+
+            // get enemy robot selection
+            enemySelection = $('.enemySelection').find(':selected').val();
+            enemy = new BattleDome.BotHall[enemySelection](enemyName)
+
+            console.log(player)
+            console.log(enemy)
+        }
+    })
 });
 
 ////////////////////////////
 ///    Event Listeners   ///
 ////////////////////////////
 
-$("#doBattle").click(function(e) {
-    // get player name
-    playerName = $('#player-name')[0].value;
-    enemyName = $('#enemy-name')[0].value;
-
-    // get players robot selection
-    playerSelection = $('.robotSelection').find(':selected').val();
-    player = new BattleDome.BotHall[playerSelection](playerName);
-
-    // get enemy robot selection
-    enemySelection = $('.enemySelection').find(':selected').val();
-    enemy = new BattleDome.BotHall[enemySelection](enemyName)
-
-    console.log(player)
-    console.log(enemy)
-})
 
  // Add event listener to all select buttons
   $('.classButton').click(function(){
