@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Battle Bots</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="styles/quiz.css">
 </head>
 
@@ -18,6 +18,20 @@
                 <div class = "headline">RECORD YOUR BOTS NAME</div>
                 <div class="field">
                     <input type="text" autofocus="true" id="player-name" class="field__textinput" placeholder="AwesomeBot">
+                </div>
+
+                <!-- Select Robot -->
+                <div class="btn-group">
+                  <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select your robot <span class="caret"></span>
+                  </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">C-3PO</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="card__prompt">
@@ -218,7 +232,8 @@
         </section>
     </article>
 
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src='bower_components/bootstrap/dist/js/bootstrap.js'></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/robots.js"></script>
     <script src="scripts/enemies.js"></script>
