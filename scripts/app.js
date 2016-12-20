@@ -22,7 +22,9 @@ $(document).ready(function() {
         //If no name, class or weapon selected and user tries to advance to next page, an alert will pop up.
 
         if (moveAlong === false && ($("#player-name").val() == "")) {
-            alert('Hey listen! I\'d call you by your name, but I don\'t know it!');
+            alert('Please name your robot');
+        } if (moveAlong === false && ($("#enemy-name").val() == "")) {
+            alert("Please name your enemy");
         }
 
     });
