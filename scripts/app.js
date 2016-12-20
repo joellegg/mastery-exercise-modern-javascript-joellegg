@@ -1,4 +1,5 @@
 let player = {};
+let playerRobot;
 
 // Show the correct html sections
 $(document).ready(function() {
@@ -50,8 +51,33 @@ $(document).ready(function() {
 ////////////////////////////
 
 $("#doBattle").click(function(e) {
-    // assign player a basic robot
+    // get player name
     playerName = $('#player-name')[0].value;
-    player = new BattleDome.BotHall.RobotClass(playerName);
+    enemyName = $('#enemy-name')[0].value;
+
+    // get players robot selection
+    playerSelection = $('.robotSelection').find(':selected').val();
+    player = new BattleDome.BotHall[playerSelection](playerName);
+
+    // get enemy robot selection
+    enemySelection = $('.enemySelection').find(':selected').val();
+    enemy = new BattleDome.BotHall[enemySelection](enemyName)
+
     console.log(player)
+    console.log(enemy)
 })
+
+ // Add event listener to all select buttons
+  $('.classButton').click(function(){
+    playerClass = $(this).find('.btn__text').text()
+
+    if(playerClass !== 'surprise me'){
+      // Thanks Luke W for giving me this idea
+      hero.class = new Gauntlet.GuildHall[playerClass]
+    }
+
+    else if(playerClass.toLowerCase() === "surprise me") {
+      //console.log(playerClass)
+      hero.class = new Gauntlet.GuildHall.PlayerClass();
+    }
+  })
