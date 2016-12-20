@@ -21,7 +21,7 @@
                 </div>
 
                 <!-- Select Robot -->
-                <select name="select">
+                <select class='robotSelection' name="select">
                   <option value="value1" selected>SELECT YOUR ROBOT:</option>
                   <option value="value2">C-3PO</option>
                   <option value="value3">R2-D2</option>
@@ -37,7 +37,7 @@
                     <input type="text" autofocus="false" id="enemy-name" class="field__textinput" placeholder="Sir PoopFace">
                 </div>
                 <!-- Select Robot -->
-                <select name="select">
+                <select class='enemySelection' name="select">
                   <option value="value1" selected>CHOOSE YOUR ENEMY</option>
                   <option value="value2">C-3PO</option>
                   <option value="value3">R2-D2</option>
@@ -49,10 +49,7 @@
             </div>
             <!-- Button to move along to bot class Section -->
             <div class="card__button">
-                <a class="selectClass card__link btn btn--big btn--orange" href="#" next="card--battleground">
-                    <span class="btn__prompt"></span>
-                    <span class="btn__text">Do Battle</span>
-                </a>
+                <button id='doBattle' class="selectClass card__link btn btn--big btn--orange" next="card--battleground">Do Battle</button>
             </div>
         </section>
 
@@ -139,8 +136,8 @@
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src='bower_components/bootstrap/dist/js/bootstrap.js'></script>
-    <script src="scripts/app.js"></script>
     <script src="scripts/robots.js"></script>
+    <script src="scripts/app.js"></script>
     <script src="scripts/battledome.js"></script>
 </body>
 </html>

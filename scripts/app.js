@@ -1,3 +1,5 @@
+let player = {};
+
 // Show the correct html sections
 $(document).ready(function() {
     /* Show the initial view that accepts player name */
@@ -10,7 +12,8 @@ $(document).ready(function() {
 
         switch (nextCard) {
             case "card--battleground":
-                moveAlong = ($("#player-name").val() !== "") && ($("#enemy-name").val() !== "");
+                // add condition to require name, enemy name, & select value for player and enemy;
+                moveAlong = ($("#player-name").val() !== "") && ($("#enemy-name").val() !== "") && ($('.robotSelection').find(':selected').text() !== 'SELECT YOUR ROBOT') && ($('.enemySelection').find(':selected').text() !== 'CHOOSE YOUR ENEMY');
                 break;
         }
 
@@ -19,12 +22,16 @@ $(document).ready(function() {
             $("." + nextCard).show();
         }
 
-        //If no name, class or weapon selected and user tries to advance to next page, an alert will pop up.
+        //If no name, robot, enemy name, or enemy robot selected page will not advance
 
         if (moveAlong === false && ($("#player-name").val() == "")) {
             alert('Please name your robot');
         } if (moveAlong === false && ($("#enemy-name").val() == "")) {
             alert("Please name your enemy");
+        } if (moveAlong === false && $('.robotSelection').find(':selected').text() == 'SELECT YOUR ROBOT') {
+            alert("Please select your robot")
+        } if (moveAlong === false && $('.enemySelection').find(':selected').text() == 'CHOOSE YOUR ENEMY') {
+            alert("Please select your enemy")
         }
 
     });
@@ -42,26 +49,9 @@ $(document).ready(function() {
 ///    Event Listeners   ///
 ////////////////////////////
 
-// When a class type button has focus, add a class to it and remove the class when another class type button has focus.
-$('.classButton').focus(function(event) {
-    var target = $(event.target)
-    if(target.hasClass('classButton')) {
-        $('.classButton').removeClass('borderClick')
-        target.addClass('borderClick')
-    } else if (target.parent().hasClass('classButton')) {
-        target.parent().addClass('borderClick')
-        $('.borderClick').removeClass('borderClick')
-    }
-})
-
-
-$('.weaponButton').focus(function(event) {
-    var target = $(event.target)
-    if(target.hasClass('weaponButton')) {
-        $('.weaponButton').removeClass('borderClick')
-        target.addClass('borderClick')
-    } else if (target.parent().hasClass('weaponButton')) {
-        target.parent().addClass('borderClick')
-        $('.borderClick').removeClass('borderClick')
-    }
+$("#doBattle").click(function(e) {
+    // assign player a basic robot
+    playerName = $('#player-name')[0].value;
+    player = new BattleDome.BotHall.RobotClass(playerName);
+    console.log(player)
 })

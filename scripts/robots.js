@@ -2,7 +2,8 @@ var BattleDome = BattleDome || {};
 BattleDome.BotHall = {};
 
 //  Base robot function
-BattleDome.BotHall.RobotClass = function() {
+BattleDome.BotHall.RobotClass = function(name) {
+    this.playerName = name || 'unknown player'
     this.name = 'Toaster';
     this.healthBonus = 0;
     this.damageBonus = 0;
