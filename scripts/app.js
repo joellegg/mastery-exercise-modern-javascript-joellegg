@@ -22,10 +22,8 @@ $(document).ready(function() {
                 moveAlong = ($(".classButton").hasClass("borderClick"));
                 console.log('switching to card--path', moveAlong)
                 break;
-            case "card--path":
-                moveAlong = ($("#player-name").val() !== "")
             case "card--battleground":
-                moveAlong = ($(".weaponButton").hasClass("borderClick") === true);
+                moveAlong = ($(".classButton").hasClass("borderClick") === true);
                 break;
         }
 
