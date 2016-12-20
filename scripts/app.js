@@ -64,19 +64,7 @@ $("#doBattle").click(function() {
         enemy = new BattleDome.BotHall[enemySelection](enemyName)
 
     }
+    loadPlayer();
 })
 
- // Add event listener to all select buttons
-  $('.classButton').click(function(){
-    playerClass = $(this).find('.btn__text').text()
-
-    if(playerClass !== 'surprise me'){
-      // Thanks Luke W for giving me this idea
-      hero.class = new Gauntlet.GuildHall[playerClass]
-    }
-
-    else if(playerClass.toLowerCase() === "surprise me") {
-      //console.log(playerClass)
-      hero.class = new Gauntlet.GuildHall.PlayerClass();
-    }
-  })
+// event listener on attack button
