@@ -1,6 +1,11 @@
 // --------------------------------------------------------------------------------- //
 let playerMaxHealth;
 let enemyMaxHealth;
+
+
+// hide the results div
+$('#battleResults').hide()
+
 // run loadPlayer function once battle button is pressed in app.js
 function loadPlayer () {
     $('#playerSelection').html(player.robot);
@@ -60,7 +65,6 @@ function removeClassColors() {
 }
 
 function addColorClass(healthNow, healthHTML) {
-    console.log('healthNow', healthNow);
     if ((healthNow) > 50) {
         healthHTML.addClass('progress-bar-success')
     } else if ((healthNow) > 25) {
@@ -72,24 +76,24 @@ function addColorClass(healthNow, healthHTML) {
 
 // Function to calculate damage on attack button click
 function attackEachOther() {
-    console.log("attackEachOther function called")
     // Hero attacks first
         // Remove attack damage from enemy health
         enemy.healthBonus -= player.damageBonus;
-        console.log("enemy health after hit", enemy.healthBonus);
 
         // Display enemy's health on DOM
-        loadEnemyStats('enemy health after attack', enemy.healthBonus);
+        loadEnemyStats(enemy.healthBonus);
 
     // Check if enemy is dead
         if (enemy.healthBonus <= 0) {
             // If enemy is dead hero wins - end game
-
+            $('#battleResults').show().addClass('greenBorder');
             $('#battleResults').html(
                 `<h1>Results:</h1>
-                  <h3>Your hero,</h3>
-                  <h2>${player.name}</h2>
-                  <h3>has found glory!!!</h3>`
+                  <h3>${player.name}'s robot,</h3>
+                  <h3>${player.robot},</h3>
+                  <h3>has defeated</h3>
+                  <h3>${enemy.name}'s robot,</h3>
+                  <h3>${enemy.robot}</h3>`
                 );
             $('#attackBttn').hide()
             $('#battleBackButtonDiv').before(`<a href="http://localhost:8080"><button>Restart Game?</button></a>`)
@@ -98,7 +102,6 @@ function attackEachOther() {
     // Enemy attacks
         // Remove attack damage from hero health
         player.healthBonus -= enemy.damageBonus;
-        console.log('player health after attack', player.healthBonus);
 
         // display heroes health on DOM
         loadPlayerStats(player.healthBonus);
@@ -106,13 +109,16 @@ function attackEachOther() {
     // Check if Hero is dead
         if (player.healthBonus <= 0){
             // if hero is dead enemy wins - end game
+            $('#battleResults').show().addClass('redBorder');
             $('#battleResults').html(
                 `<h1>Results:</h1>
-                  <h3>Your hero,</h3>
-                  <h2>${player.name}</h2>
-                  <h3>has been defeated.</h3>`
+                  <h3>${player.name}'s robot,</h3>
+                  <h3>${player.robot},</h3>
+                  <h3>has been defeated by</h3>
+                  <h3>${enemy.name}'s robot,</h3>
+                  <h3>${enemy.robot}</h3>`
                 );
-            $('#attackBttn').hide()
+            $('#attackBttn').hide();
             $('#battleBackButtonDiv').before(`<a href="http://localhost:8080"><button>Restart Game?</button></a>`)
 
         }

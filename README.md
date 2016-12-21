@@ -23,7 +23,7 @@ When your work in complete, push up the branch (`git push origin quiz`) and subm
 ### Code/Tools Requirements
 
 1. You must use jQuery for interacting with the DOM.
-1. You muse use Bootstrap for base styling.
+1. You must use Bootstrap for base styling.
 
 ### Logical Requirements
 
@@ -40,7 +40,7 @@ You'll be building robots to battle each other.
 
 1. When your user interface first loads, provide 2 text inputs to name the two robots that will do battle.
 2. You must also provide a select element underneath each text input so that the user can select one of the 6 robot models you defined.
-3. Provide a Attack! button that, when clicked, simply applies the damage output of each robot against the other one.
+3. Provide an Attack! button that, when clicked, simply applies the damage output of each robot against the other one.
 4. Once either robot's health is <0 display a message that the battle is over, and which one won. For example...
 
 ##### The Viper Drone defeated the Behemoth ATV with its flamethrower.
