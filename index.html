@@ -1,0 +1,120 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Battle Bots</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/quiz.css">
+</head>
+
+<body>
+
+    <article id="game-container">
+
+        <!-- Bot Name Selection Section -->
+        <section id="player-setup" class="card card--name">
+            <div class="card__prompt">
+                <div class = "headline">RECORD YOUR NAME:</div>
+                <div class="field">
+                    <input type="text" autofocus="true" id="player-name" class="field__textinput" placeholder="AwesomeBot">
+                </div>
+
+                <!-- Select Robot -->
+                <select class='robotSelection' name="select">
+                  <option value="value1" selected>SELECT YOUR BOT:</option>
+                  <option value="C3PO">C-3PO</option>
+                  <option value="R2D2">R2-D2</option>
+                  <option value="Optimus">Optimus Prime</option>
+                  <option value="Bumblebee">Bumblebee</option>
+                  <option value="Dot">Dot</option>
+                  <option value="Terminator">Terminator </option>
+                </select>
+            </div>
+            <div class="card__prompt">
+                <div class="headline topMargin">RECORD YOUR ENEMIES NAME:</div>
+                <div class="field">
+                    <input type="text" autofocus="false" id="enemy-name" class="field__textinput" placeholder="Sir PoopFace">
+                </div>
+                <!-- Select Robot -->
+                <select class='enemySelection' name="select">
+                  <option value="value1" selected>CHOOSE YOUR ENEMY</option>
+                  <option value="C3PO">C-3PO</option>
+                  <option value="R2D2">R2-D2</option>
+                  <option value="Optimus">Optimus Prime</option>
+                  <option value="Bumblebee">Bumblebee</option>
+                  <option value="Dot">Dot</option>
+                  <option value="Terminator">Terminator </option>
+                </select>
+            </div>
+            <!-- Button to move along to bot class Section -->
+            <div class="card__button">
+                <button id='doBattle' class="selectClass card__link btn btn--big btn--orange" next="card--battleground">Do Battle</button>
+            </div>
+        </section>
+
+        <!-- Battle ground section -->
+        <section id="battleground" class="card card--battleground">
+            <h1 class="centeredTitle">Battle Bots</h1>
+            <div class="container">
+                <div class="row">
+
+                    <!-- left div -->
+                    <div class="battlefieldDivs col-sm-4">
+                        <!-- player health -->
+                        <div class="grayBack">
+                            <h2>Player Stats</h2>
+                            <p>Health</p>
+                            <div class="progress">
+                                <div id="playerHealth" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="boxed" id="playerSelection">Player</h3>
+                        <div>
+                            <img class="takeFullSize" id='playerImage' src="">
+                        </div>
+                    </div>
+
+                    <!-- middle div -->
+                    <div class="battlefieldDivs centerDiv col-sm-4">
+                        <div id="battleBackButtonDiv">
+                            <a class="card__back back--battlefield btn btn--small" href="#" previous="card--name">
+                                <span class="btn__prompt">&lt;</span>
+                                <span class="btn__text">Back</span>
+                            </a>
+                        </div>
+                        <button id="attackBttn">Attack!</button>
+                        <div id="battleResults">
+                        </div>
+                    </div>
+
+                    <!-- right div -->
+                    <div class="battlefieldDivs col-sm-4">
+                        <div class="grayBack">
+                            <h2>Enemy Stats</h2>
+                            <p>Health</p>
+                            <div class="progress">
+                                <div id="enemyHealth" class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="boxed" id="enemySelection">Villain</h3>
+                        <div class="takeFullSize">
+                            <img  id='enemyImage' src="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </article>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src='bower_components/bootstrap/dist/js/bootstrap.js'></script>
+    <script src="scripts/robots.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/battledome.js"></script>
+</body>
+</html>
