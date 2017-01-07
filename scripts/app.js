@@ -17,11 +17,10 @@ $(document).ready(function() {
                 moveAlong = ($("#player-name").val() !== "") && ($("#enemy-name").val() !== "");
                 break;
             case "card--robot":
-                // change to only be true if a button is selected
                 moveAlong = ($(".classButton").hasClass("borderClick"));
                 break;
             case "card--battleground":
-                moveAlong = ($(".classButton").hasClass("borderClick") === true);
+                moveAlong = ($(".robotButton").hasClass("borderClick"));
                 break;
         }
 
@@ -30,14 +29,7 @@ $(document).ready(function() {
             $("." + nextCard).show();
         }
 
-        //If no name, class or weapon selected and user tries to advance to next page, an alert will pop up.
-
-        if (moveAlong === false && ($("#player-name").val() == "")) {
-            alert('Hey listen! I\'d call you by your name, but I don\'t know it!')
-        } else if
-            (moveAlong === false && ($(".classButton").hasClass("borderClick") === false)) {
-            alert('I personally recommend you choose to be surprised.')
-        }
+        //If no name, class, or bot selected and user tries to advance to next page, an alert will pop up.
 
     });
 
@@ -57,16 +49,7 @@ $(document).ready(function() {
             $(".card").hide();
             $("." + nextCard).show();
         }
-
-        // If no name is inserted and the enter is pressed an alert will pop up.
-
-        if (moveAlong === false && (e.key === "Enter")) {
-            alert('Hey listen! I\'d call you by your name, but I don\'t know it!')
-        };
-
     });
-
-
 
     // When the back button clicked, move back a view
     $(".card__back").click(function(e) {
@@ -88,7 +71,7 @@ $('.classButton').on('click', function(e) {
         for (let i = 0; i < starwars.length; i++) {
             robots +=`
                     <div class="card__button col-sm-4">
-                        <a class="classButton class__link btn btn--big btn--blue" href="#">
+                        <a class="robotButton class__link btn btn--big btn--blue" href="#">
                             <span class="btn__prompt">></span>
                             <span class="btn__text">${starwars[i]}</span>
                         </a>
@@ -101,7 +84,7 @@ $('.classButton').on('click', function(e) {
         for (let i = 0; i < transformers.length; i++) {
             robots +=`
                     <div class="card__button col-sm-4">
-                        <a class="classButton class__link btn btn--big btn--blue" href="#">
+                        <a class="robotButton class__link btn btn--big btn--blue" href="#">
                             <span class="btn__prompt">></span>
                             <span class="btn__text">${transformers[i]}</span>
                         </a>
@@ -135,6 +118,7 @@ $('.classButton').on('click', function(e) {
 // When a class type button has focus, add a class to it and remove the class when another class type button has focus.
 $('.classButton').focus(function(event) {
     var target = $(event.target);
+    console.log('yes');
     if(target.hasClass('classButton')) {
         $('.classButton').removeClass('borderClick');
         target.addClass('borderClick');
@@ -142,15 +126,16 @@ $('.classButton').focus(function(event) {
         target.parent().addClass('borderClick');
         $('.borderClick').removeClass('borderClick');
     }
-})
+});
 
 $('.robotButton').focus(function(event) {
-    var target = $(event.target);
+    var target = event.target;
+    console.log('yes again');
     if(target.hasClass('robotButton')) {
         $('.robotButton').removeClass('borderClick');
-        target.addClass('borderClick');
+        $(target).addClass('borderClick');
     } else if (target.parent().hasClass('robotButton')) {
-        target.parent().addClass('borderClick');
+        $(target).parent().addClass('borderClick');
         $('.borderClick').removeClass('borderClick');
     }
-})
+});
