@@ -76,35 +76,6 @@ $(document).ready(function() {
     });
 });
 
-////////////////////////////
-///    Event Listeners   ///
-////////////////////////////
-
-// When a class type button has focus, add a class to it and remove the class when another class type button has focus.
-$('.classButton').focus(function(event) {
-    var target = $(event.target);
-    console.log('this here happended')
-    if(target.hasClass('classButton')) {
-        $('.classButton').removeClass('borderClick');
-        target.addClass('borderClick');
-    } else if (target.parent().hasClass('classButton')) {
-        target.parent().addClass('borderClick');
-        $('.borderClick').removeClass('borderClick');
-    }
-})
-
-
-$('.weaponButton').focus(function(event) {
-    var target = $(event.target)
-    if(target.hasClass('weaponButton')) {
-        $('.weaponButton').removeClass('borderClick')
-        target.addClass('borderClick')
-    } else if (target.parent().hasClass('weaponButton')) {
-        target.parent().addClass('borderClick')
-        $('.borderClick').removeClass('borderClick')
-    }
-})
-
 
 //////////////////////////////////////////////////
 ///   Show player options based on selection   ///
@@ -143,7 +114,7 @@ $('.classButton').on('click', function(e) {
         for (let i = 0; i < misc.length; i++) {
             robots +=`
                     <div class="card__button col-sm-4">
-                        <a class="classButton class__link btn btn--big btn--blue" href="#">
+                        <a class="robotButton class__link btn btn--big btn--blue" href="#">
                             <span class="btn__prompt">></span>
                             <span class="btn__text">${misc[i]}</span>
                         </a>
@@ -156,3 +127,30 @@ $('.classButton').on('click', function(e) {
 /////////////////////////////
 ///      Add Player       ///
 /////////////////////////////
+
+////////////////////////////
+///    Event Listeners   ///
+////////////////////////////
+
+// When a class type button has focus, add a class to it and remove the class when another class type button has focus.
+$('.classButton').focus(function(event) {
+    var target = $(event.target);
+    if(target.hasClass('classButton')) {
+        $('.classButton').removeClass('borderClick');
+        target.addClass('borderClick');
+    } else if (target.parent().hasClass('classButton')) {
+        target.parent().addClass('borderClick');
+        $('.borderClick').removeClass('borderClick');
+    }
+})
+
+$('.robotButton').focus(function(event) {
+    var target = $(event.target);
+    if(target.hasClass('robotButton')) {
+        $('.robotButton').removeClass('borderClick');
+        target.addClass('borderClick');
+    } else if (target.parent().hasClass('robotButton')) {
+        target.parent().addClass('borderClick');
+        $('.borderClick').removeClass('borderClick');
+    }
+})

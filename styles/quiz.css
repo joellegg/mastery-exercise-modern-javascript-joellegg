@@ -222,15 +222,9 @@ div .progress {
   background-color: #73593b;
   border: 2px solid #73593b;
 }
-
-.weaponButton {
-  background-color: #c93200;
-  border: 2px solid #c93200;
-  max-width: 8em;
-}
-
-.buttonSurprise {
-  background-color: #816426;
+.robotButton {
+  background-color: #73593b;
+  border: 2px solid #73593b;
 }
 
 .borderClick {
