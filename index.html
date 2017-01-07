@@ -31,6 +31,7 @@
                   <option value="Terminator">Terminator </option>
                 </select>
             </div>
+<<<<<<< HEAD
             <div class="card__prompt">
                 <div class="headline topMargin">RECORD YOUR ENEMIES NAME:</div>
                 <div class="field">
@@ -50,6 +51,80 @@
             <!-- Button to move along to bot class Section -->
             <div class="card__button">
                 <button id='doBattle' class="selectClass card__link btn btn--big btn--orange" next="card--battleground">Do Battle</button>
+=======
+
+            <!-- Button to move along to bot class Section -->
+            <div class="card__button">
+                <a class="selectClass card__link btn btn--big btn--orange" href="#" next="card--class">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Select Your Bot Class</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Bot Class Selection Section -->
+        <section id="class-select" class="card card--class">
+            <!-- back button -->
+            <div>
+                <a class="card__back btn btn--small" href="#" previous="card--name">
+                    <span class="btn__prompt">&lt;</span>
+                    <span class="btn__text">Back</span>
+                </a>
+            </div>
+            <!-- 3 classes, Star Wars, Transformers, Misc -->
+            <div class="card__button">
+                <a class="classButton class__link btn btn--big btn--blue" href="#">
+                    <span class="btn__prompt">></span>
+                    <span class="btn__text">Star Wars</span>
+                </a>
+            </div>
+            <div class="card__button">
+                <a class="classButton class__link btn btn--big btn--blue" href="#">
+                    <span class="btn__prompt">></span>
+                    <span class="btn__text">Transformers</span>
+                </a>
+            </div>
+            <div class="card__button">
+                <a class="classButton class__link btn btn--big btn--blue" href="#">
+                    <span class="btn__prompt">></span>
+                    <span class="btn__text">Misc</span>
+                </a>
+            </div>
+            <!-- Button to move along to robot Section -->
+            <div class="card__button">
+                <a class="card__link btn btn--big btn--orange" href="#" next="card--robot">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Select Your Bot</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Robot Selection Section -->
+        <section id="robot-select" class="card card--robot">
+            <!-- Button to go back to class selection -->
+            <div class="card__prompt">
+                <div class="headline">CHOOSE YOUR BOT</div>
+                <div>
+                    <a class="card__back btn btn--small" href="#" previous="card--class">
+                        <span class="btn__prompt">&lt;</span>
+                        <span class="btn__text">Back</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Div to choose your robot -->
+            <div class="container-fluid">
+                <div id="robotSelection" class="row">
+
+                </div>
+            </div>
+
+            <!-- Button to move along and select weapon -->
+            <div class="card__button">
+                <a class="card__link btn btn--big btn--orange" href="#" next="card--battleground">
+                    <span class="btn__prompt"></span>
+                    <span class="btn__text">Do Battle</span>
+                </a>
+>>>>>>> quiz
             </div>
         </section>
 
@@ -114,7 +189,12 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src='bower_components/bootstrap/dist/js/bootstrap.js'></script>
     <script src="scripts/robots.js"></script>
+<<<<<<< HEAD
     <script src="scripts/app.js"></script>
+=======
+    <script src="scripts/enemies.js"></script>
+    <script src="scripts/player.js"></script>
+>>>>>>> quiz
     <script src="scripts/battledome.js"></script>
 </body>
 </html>

@@ -44,6 +44,58 @@ $(".card__back").click(function(e) {
 });
 
 
+//////////////////////////////////////////////////
+///   Show player options based on selection   ///
+//////////////////////////////////////////////////
+
+$('.classButton').on('click', function(e) {
+    let robots = '';
+    if (e.target.innerText === 'STAR WARS') {
+        $('#robotSelection').html();
+        for (let i = 0; i < starwars.length; i++) {
+            robots +=`
+                    <div class="card__button col-sm-4">
+                        <a class="robotButton class__link btn btn--big btn--blue" href="#">
+                            <span class="btn__prompt">></span>
+                            <span class="btn__text">${starwars[i]}</span>
+                        </a>
+                    </div>`
+        }
+        $('#robotSelection').html(robots);
+    }
+    if (e.target.innerText === 'TRANSFORMERS') {
+        $('#robotSelection').html();
+        for (let i = 0; i < transformers.length; i++) {
+            robots +=`
+                    <div class="card__button col-sm-4">
+                        <a class="robotButton class__link btn btn--big btn--blue" href="#">
+                            <span class="btn__prompt">></span>
+                            <span class="btn__text">${transformers[i]}</span>
+                        </a>
+                    </div>`
+        }
+        $('#robotSelection').html(robots);
+    }
+    if (e.target.innerText === 'MISC') {
+        $('#robotSelection').html();
+        for (let i = 0; i < misc.length; i++) {
+            robots +=`
+                    <div class="card__button col-sm-4">
+                        <a class="robotButton class__link btn btn--big btn--blue" href="#">
+                            <span class="btn__prompt">></span>
+                            <span class="btn__text">${misc[i]}</span>
+                        </a>
+                    </div>`
+        }
+        $('#robotSelection').html(robots);
+    }
+})
+
+/////////////////////////////
+///      Add Player       ///
+/////////////////////////////
+
+
 ////////////////////////////
 ///    Event Listeners   ///
 ////////////////////////////
@@ -70,4 +122,28 @@ $("#doBattle").click(function() {
 // event listener on attack button
 $('#attackBttn').click(function() {
     attackEachOther()
+
+// When a class type button has focus, add a class to it and remove the class when another class type button has focus.
+$('.classButton').focus(function(event) {
+    var target = $(event.target);
+    console.log('yes');
+    if(target.hasClass('classButton')) {
+        $('.classButton').removeClass('borderClick');
+        target.addClass('borderClick');
+    } else if (target.parent().hasClass('classButton')) {
+        target.parent().addClass('borderClick');
+        $('.borderClick').removeClass('borderClick');
+    }
+});
+
+$('.robotButton').focus(function(event) {
+    var target = event.target;
+    console.log('yes again');
+    if(target.hasClass('robotButton')) {
+        $('.robotButton').removeClass('borderClick');
+        $(target).addClass('borderClick');
+    } else if (target.parent().hasClass('robotButton')) {
+        $(target).parent().addClass('borderClick');
+        $('.borderClick').removeClass('borderClick');
+    }
 });
