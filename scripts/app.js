@@ -70,9 +70,7 @@ $(document).ready(function() {
 
 
 
-    /*
-        When the back button clicked, move back a view
-     */
+    // When the back button clicked, move back a view
     $(".card__back").click(function(e) {
         var previousCard = $(this).attr("previous");
         $(".card").hide();
@@ -106,4 +104,12 @@ $('.weaponButton').focus(function(event) {
         target.parent().addClass('borderClick')
         $('.borderClick').removeClass('borderClick')
     }
+})
+
+
+//////////////////////////////////////////////////
+///   Show player options based on selection   ///
+//////////////////////////////////////////////////
+$('.classButton').on('click', function(e) {
+    console.log(e.target.innerText);
 })

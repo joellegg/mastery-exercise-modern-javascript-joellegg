@@ -1,14 +1,8 @@
 /*
-  TODO: Modularize this code with IIFE or Browserify
- */
-var Gauntlet = Gauntlet || {};
-Gauntlet.Combatants = {};
-
-/*
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
  */
-Gauntlet.Combatants.Player = function(name) {
+Player = function(name) {
   this.species = null;
   this.class = null;
   this.weapon = null;
@@ -42,11 +36,11 @@ Gauntlet.Combatants.Player = function(name) {
   };
 };
 
-Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
+Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
 }
 
-Gauntlet.Combatants.Player.prototype.generateClass = function() {
+Player.prototype.generateClass = function() {
   // Get a random index from the allowed classes array
   var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
 
@@ -60,34 +54,3 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
   this.health += this.class.healthBonus;
   return this.class;
 };
-
-/*
-  Define the base properties for a human in a
-  constructor function.
- */
-Gauntlet.Combatants.Human = function() {
-  var randomSkin;
-
-  this.species = "Human";
-  this.intelligence = this.intelligence + 20;
-
-  this.skinColors.push("brown", "red", "white", "disease");
-  randomSkin = Math.round(Math.random() * (this.skinColors.length-1));
-  this.skinColor = this.skinColors[randomSkin];
-
-  this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
-};
-Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
-
-
-/*
-  Define the base properties for a monster in a
-  constructor function.
- */
-Gauntlet.Combatants.Monster = function() {
-  this.health = this.health - 30;
-  this.intelligence = this.intelligence -20;
-  this.strength = this.strength + 30;
-};
-
-Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
