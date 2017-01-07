@@ -15,12 +15,10 @@ $(document).ready(function() {
         switch (nextCard) {
             case "card--class":
                 moveAlong = ($("#player-name").val() !== "") && ($("#enemy-name").val() !== "");
-                console.log('switching to robot card', moveAlong)
                 break;
             case "card--robot":
                 // change to only be true if a button is selected
                 moveAlong = ($(".classButton").hasClass("borderClick"));
-                console.log('switching to card--path', moveAlong)
                 break;
             case "card--battleground":
                 moveAlong = ($(".classButton").hasClass("borderClick") === true);
@@ -84,13 +82,14 @@ $(document).ready(function() {
 
 // When a class type button has focus, add a class to it and remove the class when another class type button has focus.
 $('.classButton').focus(function(event) {
-    var target = $(event.target)
+    var target = $(event.target);
+    console.log('this here happended')
     if(target.hasClass('classButton')) {
-        $('.classButton').removeClass('borderClick')
-        target.addClass('borderClick')
+        $('.classButton').removeClass('borderClick');
+        target.addClass('borderClick');
     } else if (target.parent().hasClass('classButton')) {
-        target.parent().addClass('borderClick')
-        $('.borderClick').removeClass('borderClick')
+        target.parent().addClass('borderClick');
+        $('.borderClick').removeClass('borderClick');
     }
 })
 
@@ -110,6 +109,50 @@ $('.weaponButton').focus(function(event) {
 //////////////////////////////////////////////////
 ///   Show player options based on selection   ///
 //////////////////////////////////////////////////
+
 $('.classButton').on('click', function(e) {
-    console.log(e.target.innerText);
+    let robots = '';
+    if (e.target.innerText === 'STAR WARS') {
+        $('#robotSelection').html();
+        for (let i = 0; i < starwars.length; i++) {
+            robots +=`
+                    <div class="card__button col-sm-4">
+                        <a class="classButton class__link btn btn--big btn--blue" href="#">
+                            <span class="btn__prompt">></span>
+                            <span class="btn__text">${starwars[i]}</span>
+                        </a>
+                    </div>`
+        }
+        $('#robotSelection').html(robots);
+    }
+    if (e.target.innerText === 'TRANSFORMERS') {
+        $('#robotSelection').html();
+        for (let i = 0; i < transformers.length; i++) {
+            robots +=`
+                    <div class="card__button col-sm-4">
+                        <a class="classButton class__link btn btn--big btn--blue" href="#">
+                            <span class="btn__prompt">></span>
+                            <span class="btn__text">${transformers[i]}</span>
+                        </a>
+                    </div>`
+        }
+        $('#robotSelection').html(robots);
+    }
+    if (e.target.innerText === 'MISC') {
+        $('#robotSelection').html();
+        for (let i = 0; i < misc.length; i++) {
+            robots +=`
+                    <div class="card__button col-sm-4">
+                        <a class="classButton class__link btn btn--big btn--blue" href="#">
+                            <span class="btn__prompt">></span>
+                            <span class="btn__text">${misc[i]}</span>
+                        </a>
+                    </div>`
+        }
+        $('#robotSelection').html(robots);
+    }
 })
+
+/////////////////////////////
+///      Add Player       ///
+/////////////////////////////
